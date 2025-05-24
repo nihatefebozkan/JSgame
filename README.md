@@ -1,5 +1,5 @@
 # JSgame
-# KOÇEPE OyunU Hakkında
+# KOÇEPE Oyunu Hakkında
 
 1) HTML5 Canvas ile hazırlanmış basit bir 2D nişancı oyunu.
 
