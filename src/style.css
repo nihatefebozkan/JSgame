@@ -1,0 +1,183 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;      /* overlay’ler için gerekli */
+  background: #222;
+  font-family: Arial, sans-serif;
+}
+
+
+#startscreen {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+#startscreen.hidden {
+  display: none;
+}
+#startbutton {
+  padding: 15px 30px;
+  font-size: 2rem;
+  color: #fff;
+  background: #e74c3c;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#startbutton:hover {
+  background: #c0392b;
+}
+
+.volume-control {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 30;              /* upgrademenu’dan, startScreen’den önce gelmesi gerekirse z-index’i ayarlayın */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.volume-control label {
+  color: #eee;
+  font-size: 1rem;
+}
+
+#volumeSlider {
+  width: 150px;
+  -webkit-appearance: none;
+  height: 6px;
+  background: #555;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #0af;
+  border-radius: 50%;
+}
+
+#volumeSlider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #0af;
+  border: none;
+  border-radius: 50%;
+}
+
+
+/* Upgrade Menüsü */
+#upgrademenu {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;            /* JS ile açılacak */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #fff;
+  z-index: 20;
+}
+#upgrademenu h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+#upgrademenu p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+#upgrademenu button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #3498db;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#upgrademenu button:hover {
+  background: #2980b9;
+}
+
+/* Oyun Canvas */
+#gamecanvas {
+  display: block;
+  margin: 20px auto;
+  width: 800px;              /* İstediğin genişlik */
+  height: 600px;             /* İstediğin yükseklik */
+  background: radial-gradient(circle at center, #222, #111);
+  border: 2px solid #333;
+  border-radius: 12px;
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.8),        /* dış gölge */
+    inset 0 0 15px rgba(255, 255, 255, 0.05); /* iç hafif parlama */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;          /* kenarlardan taşmayı gizler */
+
+}
+
+/* Opsiyonel: Neon stilinde hafif bir “pulse” animasyonu */
+@keyframes neonPulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(0, 200, 255, 0.6), inset 0 0 10px rgba(0, 200, 255, 0.2); }
+  50%      { box-shadow: 0 0 25px rgba(0, 200, 255, 1),   inset 0 0 15px rgba(0, 200, 255, 0.3); }
+}
+#gamecanvas.glow {
+  animation: neonPulse 3s ease-in-out infinite;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.hidden {
+  display: none !important;
+}
+.info-content {
+  max-width: 600px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  text-align: center;
+}
+.info-content h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.info-content p {
+  margin: 0.5rem 0;
+}
+.info-content button {
+  margin-top: 1.5rem;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #e74c3c;
+  color: #fff;
+}
+.info-content button:hover {
+  background: #c0392b;
+}

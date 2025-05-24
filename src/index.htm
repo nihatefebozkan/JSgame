@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Koçepe Oyunu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- bilgilendirme ekranı -->
+  <div id="infoScreen" class="overlay">
+  <div class="info-content">
+    <h2>Koçepe Oyununa Hoşgeldiniz</h2>
+    <p>W A S D veya yön tuşları ile hareket edeceksiniz.</p>
+    <p>Eli kanlı civcivler sizi bıçaklamak üzere saldırıya kalkışacak. Bu kalkışmaları başarıyla geri püskürtmelisiniz.</p>
+    <p>Elinizin altındaki fare sizin silahınız; ateş ettiğiniz yöne doğru merminiz gider.</p>
+    <p>10 level vardır. 3. levelden itibaren küçük civcivlerden sonra anneleri intikam için sizi doğramaya gelecek; bunu da püskürtmelisiniz.</p>
+    <button id="infoafter">Anladım Oyuna Başlayabilirim</button>
+  </div>
+</div>
+
+<div id="startscreen" class="overlay hidden">
+  <button id="startbutton">Oyuna Başla</button>
+</div>
+
+  <!-- yukseltme menusu -->
+  <div id="upgrademenu">
+    <h2>Seviye Tamamlandı!</h2>
+    <p>Bir güçlendirme seç:</p>
+    <button data-upg="1">1) Mermi sayısını artır</button>
+    <button data-upg="2">2) Karakter hızını artır</button>
+    <button data-upg="3">3) Mermi hızını artır</button>
+    <button data-upg="4">4) Maksimum canı artır</button>
+  </div>
+    <div class="volume-control">
+    <label for="volumeSlider">Arka Plan Ses Seviyesi:</label>
+    <input
+      type="range"
+      id="volumeSlider"
+      min="0"
+      max="1"
+      step="0.01"
+      value="0.5"
+    />
+  </div>
+
+  <!-- canvas kismi -->
+  <canvas id="gamecanvas" width="800" height="600"></canvas>
+<audio id="bgAudio" src="sounds/arkaplan.wav" loop preload="auto"></audio>
+  <script src="game.js"></script>
+</body>
+</html>
