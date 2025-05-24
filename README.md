@@ -42,14 +42,14 @@
 <h1>Oyun'a Dair Fotoğraflar </h1> 
 
 <h2>Oyunun Giriş Ekranı</h2>
-<img src="src/resimler/ekranresmi1.png">
+<img src="src/ekranresmi1.png">
 
 
 <h2>Oyun İçi Fotoğrafı</h2>
-<img src="src/resimler/ekranresmi2.png">
+<img src="src/ekranresmi2.png">
 
 <h2>Geliştirme Menüsüne Dair Fotoğraf</h2>
-<img src="src/resimler/ekranresmi3.png">
+<img src="src/ekranresmi3.png">
 
 
 
