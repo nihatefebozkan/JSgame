@@ -52,7 +52,7 @@
 <img src="src/ekranresmi3.png">
 
 <h2>Youtube Örnek Video Linki</h2>
-<a href="">Örnek Video İçin Tıklayın</a>
+<a href="https://youtu.be/Secg-NaeC1Y">Örnek Video İçin Tıklayın</a>
 
 
 
