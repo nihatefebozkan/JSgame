@@ -55,6 +55,10 @@
 <a href="https://youtu.be/Secg-NaeC1Y">Örnek Video İçin Tıklayın</a>
 
 
+<h2>Oyuna Erişim</h2>
+<a href="https://nihatefebozkan.github.io/JSgame/src/">Oyuna Erişmek İçin Tıklayın </a>
+
+
 
 
 
